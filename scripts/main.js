@@ -1,5 +1,3 @@
-var myHeading = document.querySelector('h1');
-myHeading.textContent = 'Hello world!';
 
 let randomNumber = Math.floor(Math.random()*100) +1;
 
