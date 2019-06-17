@@ -13,25 +13,29 @@
       <button type="button" class="new-quote button">New Quote</button>
     </h1>
     <script>
-      document.querySelector('.new-quote')
-      const newQuoteButton = document.querySelector('.new-quote');
-      newQuoteButton.addEventListener('click', getQuote);
-      
-      const endpoint = "https://thesimpsonsquoteapi.glitch.me/quotes";
+      const endpoint = 'https://api.whatdoestrumpthink.com/api/v1/quotes/random';
 
-      function getQuote(){
+      function getQuote() {
         fetch(endpoint)
           .then(function (response) {
             return response.json();
           })
           .then(function (data) {
-            console.log(data);
-            console.log(data.quote);
+            displayQuote(data.message);
           })
           .catch(function () {
             console.log("An error occurred");
           });
       }
+
+      function displayQuote(quote) {
+        const quoteText = document.querySelector('.quote-text');
+        quoteText.textContent = quote;
+      }
+
+      const newQuoteButton = document.querySelector('.new-quote');
+      newQuoteButton.addEventListener('click', getQuote);
+
     </script>    
   </body>
 </html>
