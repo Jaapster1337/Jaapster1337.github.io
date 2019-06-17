@@ -10,15 +10,27 @@
     <!-- <script type="scripts/main.js"></script>     -->
     <h1>
     	<p>Qoute of the Day:</p>
+      <button type="button" class="new-quote button">New Quote</button>
     </h1>
     <script>
       document.querySelector('.new-quote')
       const newQuoteButton = document.querySelector('.new-quote');
       newQuoteButton.addEventListener('click', getQuote);
+      
+      const endpoint = "https://thesimpsonsquoteapi.glitch.me/quotes";
+
       function getQuote(){
-        console.log("newQuoteButton was clicked");
+        fetch(endpoint)
+          .then(function (response) {
+            return response.json();
+          })
+          .then(function (data) {
+            console.log(data.message);
+          })
+          .catch(function () {
+            console.log("An error occurred");
+          });
       }
-    </script>
-    <button type="button" class="new-quote button">New Quote</button>
+    </script>    
   </body>
 </html>
