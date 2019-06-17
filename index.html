@@ -12,7 +12,13 @@
     	<p>Qoute of the Day:</p>
     </h1>
     <script>
-      <button type="button" class="new-quote button">New Quote</button>
+      document.querySelector('.new-quote')
+      const newQuoteButton = document.querySelector('.new-quote');
+      newQuoteButton.addEventListener('click', getQuote);
+      function getQuote(){
+        console.log("newQuoteButton was clicked");
+      }
     </script>
+    <button type="button" class="new-quote button">New Quote</button>
   </body>
 </html>
