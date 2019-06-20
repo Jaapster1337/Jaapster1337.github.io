@@ -10,10 +10,15 @@
     <!-- <script type="scripts/main.js"></script>     -->
     <h1>
     	<p>Qoute of the Day:</p>
-      <span class="hidden">"<p class="quote-text"></p>"</span>
-      <span class="hidden right source">Donald J. Trump, 45th POTUS</span>
-      <button type="button" class="new-quote button">New Quote</button>
+      <content class="hidden">
+         <span>"</span>
+           <span class="quote-text"></span>
+         <span >"</span>
+         <br>
+         <span class="right source">Donald J. Trump, 45th POTUS</span>
+       </content>
     </h1>
+    <button type="button" class="new-quote button">New Quote</button>
     <script>
       const endpoint = 'https://api.whatdoestrumpthink.com/api/v1/quotes/random';
 
@@ -31,7 +36,8 @@
       }
 
       function displayQuote(quote) {
-        document.querySelector('.hidden').classList.remove("hidden");
+        if(document.querySelector('.hidden'))
+          document.querySelector('.hidden').classList.remove("hidden");
         console.log(document.querySelector('.quote-text'));
         const quoteText = document.querySelector('.quote-text');
         console.log(quoteText);
