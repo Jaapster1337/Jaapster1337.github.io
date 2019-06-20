@@ -10,7 +10,8 @@
     <!-- <script type="scripts/main.js"></script>     -->
     <h1>
     	<p>Qoute of the Day:</p>
-      <p class="quote-text"></p>
+      <span class="hidden">"<p class="quote-text"></p>"</span>
+      <span class="hidden right source">Donald J. Trump, 45th POTUS </span>
       <button type="button" class="new-quote button">New Quote</button>
     </h1>
     <script>
@@ -30,6 +31,7 @@
       }
 
       function displayQuote(quote) {
+        document.querySelector('.hidden').removeClass("hidden");
         console.log(document.querySelector('.quote-text'));
         const quoteText = document.querySelector('.quote-text');
         console.log(quoteText);

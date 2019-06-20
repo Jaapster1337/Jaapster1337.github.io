@@ -31,3 +31,15 @@ img{
 .quote-text{
   border:1px;
 }
+
+.hidden{
+  display: none;
+}
+
+.right{
+  text-align: right;
+}
+
+.source{
+  
+}
