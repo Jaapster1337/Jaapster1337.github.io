@@ -10,6 +10,7 @@
     <!-- <script type="scripts/main.js"></script>     -->
     <h1>
     	<p>Qoute of the Day:</p>
+      <p class="quote-text"></p>
       <button type="button" class="new-quote button">New Quote</button>
     </h1>
     <script>
@@ -23,13 +24,15 @@
           .then(function (data) {
             displayQuote(data.message);
           })
-          .catch(function () {
-            console.log("An error occurred");
+          .catch(function (error) {
+            console.log(error);
           });
       }
 
       function displayQuote(quote) {
+        console.log(document.querySelector('.quote-text'));
         const quoteText = document.querySelector('.quote-text');
+        console.log(quoteText);
         quoteText.textContent = quote;
       }
 
