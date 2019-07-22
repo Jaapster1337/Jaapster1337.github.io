@@ -5,15 +5,10 @@ html {
 }
 
 body{
-	width: 600px;
+	/*width: 600px;*/
 	margin: 0 auto;
 	background-color: white;
-	padding: 0 20px 20px 20px;
-}
-
-h1 {
-  margin: 20px;
-  padding: 20px 0;
+	padding: 20px 20px 20px 20px;
 }
 
 li{
@@ -21,10 +16,11 @@ li{
   list-style: none;
   width: 75px;
   text-align: center;
+  font-size: 16px;
 }
 
-p, li {
-  font-size: 16px;    
+p {
+  font-size: 16px;
   letter-spacing: 1px;
 }
 
@@ -35,6 +31,7 @@ img{
 
 .quote-text{
   border:1px;
+  text-align: center;
 }
 
 .hidden{
@@ -45,12 +42,12 @@ img{
   float: right;
 }
 
-.source{
-
+.header{
+  margin: 0px 10px 20px 10px;
+  border-width: 1px;
+  border-style: solid;
 }
 
 .navbar{
   display: block;
-  
-
 }
