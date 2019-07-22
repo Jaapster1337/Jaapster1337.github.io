@@ -5,20 +5,28 @@
   	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <meta charset="utf-8">
     <title>SwenkWeb</title>
+    <nav>
+      <div class="navbar">
+          <!-- <li><img src="images/bloodseal(trans).png" class="logo"></li> -->
+          <li><a href="default.html">Home</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="about.html">About</a></li>
+      </div>
+    </nav>
   </head>
+  <br />
   <body>
     <!-- <script type="scripts/main.js"></script>     -->
-    <h1>Qoute of the Day:
-      <br>
-      <br>
+    <p>Quote of the Day:
       <content class="hidden">
          <span>"</span>
            <span class="quote-text"></span>
          <span >"</span>
-         <br>
+         <br />
          <span class="right source">Donald J. Trump, 45th POTUS</span>
        </content>
-    </h1>
+    </p>
     <button type="button" class="new-quote button">New Quote</button>
     <script>
       const endpoint = 'https://api.whatdoestrumpthink.com/api/v1/quotes/random';
