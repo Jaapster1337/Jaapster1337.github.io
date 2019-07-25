@@ -5,33 +5,55 @@ html {
 }
 
 body{
-	/*width: 600px;*/
-	margin: 0 auto;
-	background-color: white;
-	padding: 20px 20px 20px 20px;
-}
-
-li{
-  float: left;
-  list-style: none;
-  width: 75px;
-  text-align: center;
-  font-size: 16px;
+  background-color: white;
+  padding: 0px 0px 20px 0px;
+  margin: 0px;
 }
 
 p {
   font-size: 16px;
   letter-spacing: 1px;
+  margin:0px;
+  padding: 20px 20px 20px 20px;
 }
 
 img{
-	display: block;
-	margin: 0 auto;
+  display: block;
+  padding: 0px 0px 10px 0px;
+}
+
+nav{
+  background: gray;
+  width: 100%;
+}
+
+nav ul{
+  padding: 0;
+}
+
+nav ul li{
+  display: inline-block;
+  list-style-type: none;
+  padding: 0; 
+  text-align: center;
+  vertical-align: middle;
+  font-size: 16px;
+}
+
+button{
+  float: center;
 }
 
 .quote-text{
+  border-style: solid;
   border:1px;
-  text-align: center;
+  align-content: center;
+  /*max-width: 750px;*/
+  overflow: hidden;
+}
+
+.new-quote{
+  
 }
 
 .hidden{
@@ -43,11 +65,24 @@ img{
 }
 
 .header{
-  margin: 0px 10px 20px 10px;
+  margin: 10px;
   border-width: 1px;
-  border-style: solid;
 }
 
 .navbar{
   display: block;
+}
+
+.quotep{
+  margin: auto;
+  width: 50%;
+  text-align: center;
+  display: block;
+  align-content: right;
+}
+
+.logo{
+  max-height: 50px;
+  max-width: 50px;
+  vertical-align: middle;
 }
