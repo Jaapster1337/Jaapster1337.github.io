@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
-  	<link href="styles/style.css" rel="stylesheet">
-  	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="styles/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <meta charset="utf-8">
-    <title>SwenkWeb</title>
+    <title>In progress</title>
     <nav>
       <div class="navbar">
-          <!-- <li><img src="images/bloodseal(trans).png" class="logo"></li> -->
-          <li class="header"><a href="default.html">Home</a></li>
+        <ul>
+          <li><img src="images/bloodseal(trans).png" class="logo"></li>
+          <li class="header"><a href="index.html">Home</a></li>
           <li class="header"><a href="news.html">News</a></li>
           <li class="header"><a href="contact.html">Contact</a></li>
           <li class="header"><a href="about.html">About</a></li>
+        <ul>
       </div>
     </nav>
   </head>
   <br />
   <body>
     <!-- <script type="scripts/main.js"></script>     -->
-    <p>Quote of the Day:
+    <p class="quotep"><b>Quote of the Day:</b>
       <content class="hidden">
          <span>"</span>
            <span class="quote-text"></span>
@@ -27,10 +29,11 @@
          <span class="right source">Donald J. Trump, 45th POTUS</span>
        </content>
     </p>
-    <button type="button" class="new-quote button">New Quote</button>
+    <p>
+      <button type="button" class="new-quote button">New Quote</button>
+    </p>
     <script>
       const endpoint = 'https://api.whatdoestrumpthink.com/api/v1/quotes/random';
-
       function getQuote() {
         fetch(endpoint)
           .then(function (response) {
@@ -43,7 +46,6 @@
             console.log(error);
           });
       }
-
       function displayQuote(quote) {
         if(document.querySelector('.hidden'))
           document.querySelector('.hidden').classList.remove("hidden");
@@ -52,10 +54,8 @@
         console.log(quoteText);
         quoteText.textContent = quote;
       }
-
       const newQuoteButton = document.querySelector('.new-quote');
       newQuoteButton.addEventListener('click', getQuote);
-
     </script>    
   </body>
 </html>
