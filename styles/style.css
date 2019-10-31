@@ -44,6 +44,14 @@ button{
   float: center;
 }
 
+.navbar-button{
+  margin: 0px;
+  border-style: none;
+  border: none;
+  float: left;
+
+}
+
 .quote-text{
   border-style: solid;
   border:1px;
